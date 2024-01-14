@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set the character set to UTF-8 and define viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Include external stylesheet for styling (books_genre.css) -->
+    <link rel="stylesheet" media="all" href="books_genre.css" />
+    
+    <!-- Set the title of the HTML page -->
+    <title>Fiction Books</title>
+</head>
+<body>
+<?php include 'header.php'; ?>
+<!-- Include the header.php file, which likely contains the header of the website -->
+
+<!-- Display the heading for the Fiction Books page -->
+<h1>Fiction Books</h1>
+
+<!-- Unordered list to display books -->
+<ul>
+    <?php
+    // Array containing data about fiction books
+    $books_data = array(
+        array('Stephanie\'s Diary', 'Lloyd Williams', 'Third Edition','booksImages/fiction/11.png'),
+        array('Blood in the Studio', 'Jeffrey LaRocque', 'Fifth Edition','booksImages/fiction/12.png'),
+        array('Sintonizzati e Cammina', 'Maria Antonietta Turillo', 'Fourth Edition','booksImages/fiction/13.png'),
+        array('Corpse Cold: New American Folklore', 'Joseph Sullivan John Brhel', 'Second Edition','booksImages/fiction/14.png'),
+        array('Creating Samantha', 'Cheryl Lynn', 'First Edition','booksImages/fiction/15.png')
+    );
+
+    // Display all fiction books
+    $start_index = 0;  // Change this to the actual starting index of "Fiction" books
+    $end_index = count($books_data) - 1;  // Change this to the actual ending index of "Fiction" books
+
+    for ($i = $start_index; $i <= $end_index; $i++) {
+        // Check if the image path exists
+        if (isset($books_data[$i][3]) && file_exists($books_data[$i][3])) {
+            echo "<li><img src='{$books_data[$i][3]}' alt='{$books_data[$i][0]}'></li>";
+        } else {
+            echo "<li>Error: Image not found for '{$books_data[$i][0]}'</li>";
+        }
+
+        echo "<li><strong>{$books_data[$i][0]}</strong></li>";  // Bold book name
+        echo "<li>{$books_data[$i][1]}</li>";  // Author name
+        echo "<li>{$books_data[$i][2]}</li>";  // Edition
+        echo "<br>";
+    }
+    ?>
+</ul>
+<?php include 'footer.php'; ?>
+<!-- Include the footer.php file, which likely contains the footer of the website -->
+</body>
+</html>

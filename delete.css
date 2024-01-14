@@ -1,0 +1,84 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #3d0d0d;
+  background: url("./booksImages/pexels-jonas-f-13020734.jpg") center center no-repeat;
+      /* Adjust background size to cover the entire viewport */
+  background-size: cover;
+  /* Set background color as a fallback in case the image is not available */
+  background-color: #f4f4f4;
+  }
+  
+  /* Header styling */
+  header {
+    background-color: #e2cccc;
+    color: #3d0d0d;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Content styling */
+  #content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    color: #e2cccc;
+    background-color: #3f0606;
+    box-shadow: 0 0 10px #e2cccc;
+    border-radius: 10px; /* Add this line to make the corners round */
+}
+  
+  /* Back link styling */
+  .back-link {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #e2cccc;
+    font-weight: bold;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Page styling */
+  .page {
+    margin-top: 20px;
+  }
+  
+  /* Item styling */
+  .item {
+    font-weight: bold;
+    color: #e2cccc;
+    margin-bottom: 10px;
+  }
+  
+  /* Operations styling */
+  #operations {
+    margin-top: 10px;
+  }
+  
+  /* Form styling */
+  form {
+    display: inline-block;
+  }
+  
+  /* Footer styling */
+  footer {
+    background-color: #e2cccc;
+    color: #3f0606;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .page h1 {
+    font-size: 24px;
+    color: #e2cccc;
+    margin-bottom: 20px;
+}

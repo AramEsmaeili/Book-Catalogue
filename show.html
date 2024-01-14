@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Set the character set and viewport for the page -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link to the stylesheet for styling the show page -->
+  <link rel="stylesheet" href="show.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>Book Library</h1>
+    <nav>
+      <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="signup.php">Sign up</a></li>
+        <li><a href="signin.php">Sign in</a></li>
+        <li>
+          <label for="genre">Genre:</label>
+          <select id="genre" name="genre">
+            <option value="">Select Genre</option>
+            <option value="Art">Art</option>
+            <option value="Comics">Comics</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Games">Games</option>
+            <option value="History">History</option>
+          </select>
+        </li>
+        <li>
+          <form action="search_results.php" method="post">
+            <input type="text" name="search" placeholder="Search...">
+            <input type="submit" value="Search">
+          </form>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="content">
+
+    <!-- Link to go back to the list of books -->
+    <a class="back-link" href="index.php"> Back to List</a>
+
+    <div class="page show">
+
+      <!-- Display the book name as the heading -->
+      <h1>Book Title</h1>
+
+      <div class="attributes">
+        <!-- Display book attributes (BookName, AuthorName, Edition) in definition lists -->
+        <dl>
+          <dt>BookName</dt>
+          <dd>Book Name Here</dd>
+        </dl>
+        <dl>
+          <dt>AuthorName</dt>
+          <dd>Author Name Here</dd>
+        </dl>
+        <dl>
+          <dt>Edition</dt>
+          <dd>Edition Here</dd>
+        </dl>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer>
+    <!-- Your footer content goes here -->
+  </footer>
+
+</body>
+
+</html>

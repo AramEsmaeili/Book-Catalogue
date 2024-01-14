@@ -1,0 +1,65 @@
+<!-- Define the document type and specify the language as English -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Set the character set to UTF-8 and define viewport settings -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Include an external stylesheet for styling (books_genre.css) -->
+  <link rel="stylesheet" media="all" href="books_genre.css" />
+
+  <!-- Set the title of the HTML page -->
+  <title>Games Books</title>
+</head>
+
+<!-- Start the body of the HTML document -->
+<body>
+
+<!-- Include the contents of the 'header.php' file -->
+<?php include 'header.php'; ?>
+
+<!-- Create a heading for the page -->
+<h1>Games Books</h1>
+
+<!-- Create an unordered list -->
+<ul>
+    <?php
+    // Define an array containing information about Games books
+    $books_data = array(
+        array('OSRIC A5 (PDF)', 'Stewart Marshall', 'Revised Edition','booksImages/games/16.png'),
+        array('Quick Primer for Old School Gaming', 'Matthew Finch', 'Fourth Edition','booksImages/games/17.png'),
+        array('Swords and Wizardry Core Rules (pdf)', 'Matthew Finch', 'Classic Edition','booksImages/games/18.png'),
+        array('Monsters of Myth', 'The First Edition Society', 'Third Edition','booksImages/games/19.png'),
+        array('For Gold & Glory', 'Justen Brown', 'Second Edition','booksImages/games/20.png')
+    );
+
+    // Display information for each Games book
+    $start_index = 0;  // Change this to the actual starting index of "Games" books
+    $end_index = count($books_data) - 1;  // Change this to the actual ending index of "Games" books
+
+    for ($i = $start_index; $i <= $end_index; $i++) {
+        // Check if the image path exists
+        if (isset($books_data[$i][3]) && file_exists($books_data[$i][3])) {
+            echo "<li><img src='{$books_data[$i][3]}' alt='{$books_data[$i][0]}'></li>";
+        } else {
+            echo "<li>Error: Image not found for '{$books_data[$i][0]}'</li>";
+        }
+
+        echo "<li><strong>{$books_data[$i][0]}</strong></li>";  // Bold book name
+        echo "<li>{$books_data[$i][1]}</li>";  // Author name
+        echo "<li>{$books_data[$i][2]}</li>";  // Edition
+        echo "<br>";
+    }
+    ?>
+</ul>
+
+<!-- Include the contents of the 'footer.php' file -->
+<?php include 'footer.php'; ?>
+
+<!-- Close the body of the HTML document -->
+</body>
+
+<!-- Close the HTML document -->
+</html>

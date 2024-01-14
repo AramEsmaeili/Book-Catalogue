@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Set the character set to UTF-8 and define viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Include external stylesheet for styling (edit.css) -->
+    <link rel="stylesheet" media="all" href="edit.css" />
+
+    <!-- Set the title of the HTML page -->
+    <title>Edit Books</title>
+</head>
+
+<body>
+    <!-- HTML content begins -->
+    <div id="content">
+        <!-- Back link to the index.php page -->
+        <a class="back-link" href="index.php"> Back to List</a>
+
+        <!-- Edit page content -->
+        <div class="page edit">
+            <h1>Edit Book</h1>
+
+            <!-- Form for editing Book information -->
+            <form action="edit.php" method="post">
+                <dl>
+                    <dt>ID</dt>
+                    <dd><input type="text" name="id" value="1" /></dd>
+                </dl>
+
+                <dl>
+                    <dt>BookName</dt>
+                    <dd><input type="text" name="BookName" value="BookName Placeholder" /></dd>
+                </dl>
+
+                <dl>
+                    <dt>AuthorName</dt>
+                    <dd><input type="text" name="AuthorName" value="AuthorName Placeholder" /></dd>
+                </dl>
+
+                <dl>
+                    <dt>Edition</dt>
+                    <dd><input type="text" name="Edition" value="Edition Placeholder" /></dd>
+                </dl>
+
+                <div id="operations">
+                    <input type="submit" value="Edit Book" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Include the footer from an external file (footer.php) -->
+    <div id="footer">
+        <!-- Footer content goes here -->
+        <p>Footer Placeholder</p>
+    </div>
+</body>
+
+</html>

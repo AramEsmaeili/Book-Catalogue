@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  /* Set the background image using the url() function */
+  background: url("./booksImages/pexels-jonas-f-13020734.jpg") center center no-repeat;
+  /* Adjust background size to cover the entire viewport */
+  background-size: cover;
+  /* Set background color as a fallback in case the image is not available */
+  background-color: #f4f4f4;
+  /* Optional: Set other styles as needed */
+  color: white; /* Text color */
+  font-family: Arial, sans-serif; /* Font family */
+}
+
+/* Page layout and styling */
+h1 {
+  text-align:center;
+  color: rgb(95, 26, 26);
+}
+
+/* Books styling */
+ul {
+  list-style: block;
+  padding: 0;
+  margin: px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li {
+  text-align:justify;
+  margin: 10px;
+  display: block;
+  width: 200px; /* Adjust the width as needed */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: large;
+}
+
+/* Book information styling */
+p {
+  margin: 0;
+}

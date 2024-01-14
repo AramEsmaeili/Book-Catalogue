@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Set character set and viewport for the page -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link to the stylesheet for styling the signup page -->
+  <link rel="stylesheet" media="all" href="signup.css" />
+</head>
+
+<body>
+
+  <!-- Include the header -->
+  <header>
+    <h1>Book Library</h1>
+    <nav>
+      <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="signup.php">Sign up</a></li>
+        <li><a href="signin.php">Sign in</a></li>
+        <li>
+          <label for="genre">Genre:</label>
+          <select id="genre" name="genre">
+            <option value="">Select Genre</option>
+            <option value="Art">Art</option>
+            <option value="Comics">Comics</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Games">Games</option>
+            <option value="History">History</option>
+          </select>
+        </li>
+        <li>
+          <form action="search_results.php" method="post">
+            <input type="text" name="search" placeholder="Search...">
+            <input type="submit" value="Search">
+          </form>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Start the form container -->
+  <div class="formcontainer">
+    <h1>Signup for Free</h1>
+    <hr>
+
+    <!-- Start the signup form -->
+    <form action="signup.php" method="post" id="signup-form">
+
+      <!-- First Name input -->
+      <div class="textfield">
+        <label for="username">First Name</label>
+        <input class="form-control" type="text" name="username" id="username" placeholder="First Name" required>
+      </div>
+
+      <!-- Last Name input -->
+      <div class="textfield">
+        <label for="lastname">Last Name</label>
+        <input class="form-control" type="text" name="lastname" id="lastname" placeholder="Last Name" required>
+      </div>
+
+      <!-- Email input -->
+      <div class="textfield">
+        <label for="email">Email Address</label>
+        <input class="form-control" type="email" name="email" id="email" placeholder="Email" required>
+      </div>
+
+      <!-- Password input -->
+      <div class="textfield">
+        <label for="pass">Password</label>
+        <input class="form-control" type="password" name="pass" id="pass" placeholder="Password" required>
+      </div>
+
+      <!-- Re-type Password input -->
+      <div class="textfield">
+        <label for="pass2">Confirm Password</label>
+        <input class="form-control" type="password" name="pass2" id="pass2" placeholder="Re-type password" required>
+      </div>
+
+      <!-- Terms and Conditions checkbox -->
+      <div class="checkbox">
+        <input class="form-check-input" type="checkbox" name="terms" id="terms" required>
+        <label for="terms">I agree to the terms and conditions</label>
+      </div>
+
+      <!-- Sign-Up and Reset buttons -->
+      <button type="submit" id="signup-button">Sign Up</button>
+      <button type="reset" class="btn btn-danger" id="reset_button">Reset</button>
+
+      <!-- Link to login page for users who already have an account -->
+      <h4> Already have an account? <a href="signin.php">Login Here</a></h4>
+    </form>
+
+    <!-- Include the footer -->
+    <footer>
+      <!-- Your footer content goes here -->
+    </footer>
+  </div>
+</body>
+
+</html>

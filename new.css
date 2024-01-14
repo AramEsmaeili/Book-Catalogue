@@ -1,0 +1,87 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+  background: url("./booksImages/pexels-jonas-f-13020734.jpg") center center no-repeat;
+      /* Adjust background size to cover the entire viewport */
+  background-size: cover;
+  /* Set background color as a fallback in case the image is not available */
+  background-color: #f4f4f4;
+  }
+  
+
+/* Page layout and styling */
+#content {
+    max-width: 800px;
+    /* 20px :everywhere, auto: centers the element in its element */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e2cccc;
+}
+
+h1 {
+    color: #3d0d0d;
+    text-align: center;
+}
+
+/* Form styling */
+form {
+    display: block;
+    /* one fraction of the available space*/
+    grid-template-columns: 1fr;
+        /* gap between form elements*/
+    gap: 10px;
+}
+
+dl {
+    grid-template-columns: 2fr 2fr;
+    gap: 5px;
+}
+
+dt {
+         /* Input Label*/
+    font-weight: bold;
+    color:#3d0d0d;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+     /* This property includes padding and border in the total width and height of the input box. It ensures that the
+     specified width and height include padding and border, not just the content.*/
+    box-sizing: border-box;
+}
+
+/* Operations styling */
+#operations {
+    text-align: center;
+    margin-top: 15px;
+}
+
+input[type="submit"] {
+    background-color: #3d0d0d;
+    color: #e2cccc;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor:pointer;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #a04559;
+}
+
+ /* Back link styling */
+ .back-link {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #3d0d0d;
+    font-weight: bold;
+  }

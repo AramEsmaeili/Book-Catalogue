@@ -1,0 +1,19 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Footer styling */
+  footer {
+    background-color: #e2cccc;
+    color: #3f0606;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  

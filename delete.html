@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Set the character set to UTF-8 and define viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Include external stylesheet for styling (delete.css) -->
+    <link rel="stylesheet" media="all" href="delete.css" />
+</head>
+
+<body>
+    <!-- HTML content begins -->
+    <div id="content">
+        <!-- Back link to the index.php page -->
+        <a class="back-link" href="index.php">&laquo; Back to List</a>
+
+        <!-- Delete page content -->
+        <div class="page delete">
+            <h1>Delete Page</h1>
+            <p>Are you sure you want to delete this Book?</p>
+            <p class="item">Book Name Placeholder</p>
+
+            <!-- Form for confirming the deletion -->
+            <form action="delete.php" method="post">
+                <div id="operations">
+                    <input type="submit" name="commit" value="Delete Book" />
+                </div>
+            </form>
+        </div>
+
+        <!-- Include the footer from an external file (footer.php) -->
+        <div id="footer">
+            <!-- Footer content goes here -->
+            <p>Footer Placeholder</p>
+        </div>
+    </div>
+</body>
+
+</html>

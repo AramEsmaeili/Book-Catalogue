@@ -1,0 +1,59 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #7e1414;
+  background: url("./booksImages/pexels-jonas-f-13020734.jpg") center center no-repeat;
+      /* Adjust background size to cover the entire viewport */
+  background-size: cover;
+  /* Set background color as a fallback in case the image is not available */
+  background-color: #f4f4f4;
+  }
+  
+
+
+  /* Content styling */
+  #content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    color: #e2cccc;
+    background-color: #3f0606;
+    box-shadow: 0 0 10px #e2cccc;
+    border-radius: 10px; /* Add this line to make the corners round */
+}
+
+
+ /* Back link styling */
+ .back-link {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #e2cccc;
+    font-weight: bold;
+  }
+
+
+.page h1 {
+    font-size: 24px;
+    color: #e2cccc;
+    margin-bottom: 20px;
+}
+
+.attributes dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.attributes dt {
+    flex: 1 0 150px;
+    font-weight: bold;
+}
+
+.attributes dd {
+    flex: 1 0 calc(100% - 150px);
+    margin: 0;
+}

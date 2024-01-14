@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Set character set and viewport for the page -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link to the stylesheet for styling the signin page -->
+  <link rel="stylesheet" media="all" href="signin.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>Book Library</h1>
+    <nav>
+      <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="signup.php">Sign up</a></li>
+        <li><a href="signin.php">Sign in</a></li>
+        <li>
+          <label for="genre">Genre:</label>
+          <select id="genre" name="genre">
+            <option value="">Select Genre</option>
+            <option value="Art">Art</option>
+            <option value="Comics">Comics</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Games">Games</option>
+            <option value="History">History</option>
+          </select>
+        </li>
+        <li>
+          <form action="search_results.php" method="post">
+            <input type="text" name="search" placeholder="Search...">
+            <input type="submit" value="Search">
+          </form>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Start the login form -->
+  <div id="form">
+    <h1>Login Form</h1>
+
+    <!-- Start the login form -->
+    <form name="form">
+      <!-- Form input for username -->
+      <div class="form-group input-container">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" class="form-control" required>
+        <!-- Error message for username or email -->
+        <div class="error-message"></div>
+      </div>
+
+      <!-- Form input for password -->
+      <div class="form-group input-container">
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="pass" class="form-control" required>
+        <!-- Error message for the password -->
+        <div class="error-message"></div>
+      </div>
+
+      <!-- Submit button for the login form -->
+      <button type="submit" id="btn">Login</button>
+    </form>
+  </div>
+
+  <footer>
+    <!-- Your footer content goes here -->
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!-- Define the document type and specify the language as English -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Set the character set to UTF-8 -->
+    <meta charset="UTF-8">
+
+    <!-- Include an external stylesheet for styling (books_genre.css) -->
+    <link rel="stylesheet" media="all" href="books_genre.css" />
+
+    <!-- Define viewport settings for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Set the title of the HTML page -->
+    <title>History Books</title>
+</head>
+
+<!-- Start the body of the HTML document -->
+<body>
+
+    <!-- Include the header section from the 'header.php' file -->
+    <?php include 'header.php'; ?>
+
+    <!-- Display the heading for the history books section -->
+    <h1>History Books</h1>
+
+    <!-- Create an unordered list for displaying history books -->
+    <ul>
+        <?php
+        // Define an array containing information about history books
+        $books_data = array(
+            array('My Wars', 'Richard Bushong', 'Fifth Edition','booksImages/history/21.png'),
+            array('In the Wake of Lewis and Clark: From the Mountains to the Sea', 'C. Mark Smith', 'Revised Edition','booksImages/history/22.png'),
+            array('The Civl War Era and the Lower Rio Grande Valley: A Brief History', 'Rolando Avila', 'Fourth Edition','booksImages/history/23.png'),
+            array('Rebelling Against the Corporate State', 'Community Environmental Legal Defense Fund (CELDF)', 'Third Edition','booksImages/history/24.png'),
+            array('Death Embraced: New Orleans Tombs and Burial Customs, Behind the Scenes Accounts of Decay, Love and Tradition', 'Mary LaCoste', 'First Edition','booksImages/history/25.png')
+        );
+
+        // Display information for each history book
+        $start_index = 0;  // Change this to the actual starting index of "History" books
+        $end_index = count($books_data) - 1;  // Change this to the actual ending index of "History" books
+
+        for ($i = $start_index; $i <= $end_index; $i++) {
+            // Check if the image path exists
+            if (isset($books_data[$i][3]) && file_exists($books_data[$i][3])) {
+                echo "<li><img src='{$books_data[$i][3]}' alt='{$books_data[$i][0]}'></li>";
+            } else {
+                echo "<li>Error: Image not found for '{$books_data[$i][0]}'</li>";
+            }
+
+            echo "<li><strong>{$books_data[$i][0]}</strong></li>";  // Bold book name
+            echo "<li>{$books_data[$i][1]}</li>";  // Author name
+            echo "<li>{$books_data[$i][2]}</li>";  // Edition
+            echo "<br>";
+        }
+        ?>
+    </ul>
+
+    <!-- Include the footer section from the 'footer.php' file -->
+    <?php include 'footer.php'; ?>
+
+<!-- Close the body of the HTML document -->
+</body>
+
+<!-- Close the HTML document -->
+</html>
